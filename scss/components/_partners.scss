@@ -1,0 +1,37 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.partners {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.4375rem;
+
+  &__title {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9%;
+    @include md-max {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4.5%;
+    @include lg-max {
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+  }
+}

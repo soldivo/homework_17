@@ -1,0 +1,86 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .main__name {
+    font-family: $workSans;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $green;
+    padding-bottom: 2.6%;
+  }
+
+  .main__title {
+    font-family: $crimsonText;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    text-align: center;
+    color: $black;
+    @include md-max {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  .main__text {
+    font-family: $workSans;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    text-align: center;
+    color: $black;
+    padding-top: 2.7%;
+    @include md-max {
+      font-size: 1.25rem;
+      line-height: 1.5625rem;
+    }
+  }
+
+  .main__btn {
+    font-family: $workSans;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    text-align: center;
+    border-radius: 0.3125rem;
+    padding: 0.6875rem 1.8438rem;
+    color: $white;
+    background-color: $dark;
+  }
+
+  .section__text {
+    font-family: $workSans;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.1719rem;
+    padding-bottom: 3.5%;
+    color: $grey;
+    @include md-max {
+      font-size: 0.9375rem;
+      line-height: 1.1719rem;
+    }
+  }
+
+  .section__title {
+    font-family: $crimsonText;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    padding-bottom: 3.5%;
+    color: $black;
+    @include md-max {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+    }
+  }
+}

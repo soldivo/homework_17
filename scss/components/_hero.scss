@@ -1,0 +1,89 @@
+@use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 7%;
+  @include md-max {
+    flex-direction: column-reverse;
+    width: 90%;
+    gap: 1.875rem;
+  }
+
+  &__info {
+    width: 35%;
+    height: 79%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5625rem;
+    @include md-max {
+      width: 100%;
+    }
+
+    &--container {
+      gap: 0.9375rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    font-family: $workSans;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.3125rem;
+    color: $white;
+
+    &--special {
+      font-family: $crimsonText;
+      font-weight: 700;
+      font-size: 2.5rem;
+      line-height: 3.125rem;
+      color: $white;
+      @include md-max {
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+      }
+    }
+  }
+
+  &__text {
+    font-family: $workSans;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.1719rem;
+    color: $white;
+  }
+
+  &__btn {
+    font-family: $workSans;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    text-align: center;
+    color: $black;
+    border-radius: 0.3125rem;
+    padding: 0.6875rem 3rem;
+    background-color: $white;
+  }
+
+  &__image {
+    width: 55%;
+    @include md-max {
+      width: 100%;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+  }
+}
